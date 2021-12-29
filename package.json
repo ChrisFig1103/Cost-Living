@@ -1,0 +1,24 @@
+{
+  "name": "living-cost",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisFig1103/Cost-Living.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisFig1103/Cost-Living/issues"
+  },
+  "homepage": "https://github.com/ChrisFig1103/Cost-Living#readme",
+  "dependencies": {
+    "nodemon": "^2.0.15",
+    "request-promise": "^4.2.6"
+  }
+}
