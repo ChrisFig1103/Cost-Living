@@ -19,6 +19,7 @@
   "homepage": "https://github.com/ChrisFig1103/Cost-Living#readme",
   "dependencies": {
     "nodemon": "^2.0.15",
+    "npm": "^8.3.0",
     "request-promise": "^4.2.6"
   }
 }

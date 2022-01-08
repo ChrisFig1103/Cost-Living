@@ -1,41 +1,81 @@
-const usd_input = document.querySelector(".usd > input");
-const jpy_input = document.querySelector(".jpy > input");
-const cad_input = document.querySelector(".cad > input");
-const mxn_input = document.querySelector(".mxn > input");
-const eur_input = document.querySelector(".eur > input");
+const usd_input = document.querySelector("#usd");
+const jpy_input = document.querySelector("#jpy");
+const cad_input = document.querySelector("#cad");
+const mxn_input = document.querySelector("#mxn");
+const eur_input = document.querySelector("#eur");
 
+const dollar = 1
+const jpy = 115.53276
+const cad = 1.2644
+const  mxn = 20.36604
+const eur = 0.88022
 
 function usdBase(){
-    const usdTemp = 1 
-    const jpyTemp = 0
-    const cadTemp = 0
-    const mxnTemp = 0
-    const eurTemp = 0
+    const usdTemp = parseFloat(usd_input.value)
+    const jpyTemp = usdTemp * jpy
+    const cadTemp = usdTemp * cad
+    const mxnTemp = usdTemp * mxn
+    const eurTemp = usdTemp * eur
 
-    /*
-    const cTemp = parseFloat(celciusInput.value);
-    const fTemp = (cTemp * (9/5)) + 32;
-    const kTemp = cTemp + 273.15;
-    farenheitInput.value = fTemp.toFixed(2);
-    kelvinInput.value = kTemp.toFixed(2);*/
+    //fTemp.toFixed(2);
+    jpy_input.value = jpyTemp
+    cad_input.value = cadTemp
+    mxn_input.value = mxnTemp
+    eur_input.value = eurTemp
+}
+
+function jpyBase(){
+    const jpyTemp = parseFloat(jpy_input.value)
+    const usdTemp = jpyTemp / jpy 
+    const cadTemp = usdTemp * cad
+    const mxnTemp = usdTemp * mxn
+    const eurTemp = usdTemp * eur
+
+    usd_input.value = usdTemp
+    cad_input.value = cadTemp
+    mxn_input.value = mxnTemp
+    eur_input.value = eurTemp
+}
+
+function cadBase(){
+    const cadTemp = parseFloat(cad_input.value)
+    const usdTemp = cadTemp / cad
+    const jpyTemp = usdTemp * jpy
+    const mxnTemp = usdTemp * mxn
+    const eurTemp = usdTemp * eur
+
+    jpy_input.value = jpyTemp
+    usd_input.value = usdTemp
+    mxn_input.value = mxnTemp
+    eur_input.value = eurTemp
+}
+
+function mxnBase(){
+    const mxnTemp = parseFloat(mxn_input.value)
+    const usdTemp = mxnTemp / mxn
+    const jpyTemp = usdTemp * jpy
+    const cadTemp = usdTemp * cad
+    const eurTemp = usdTemp * eur
+
+    jpy_input.value = jpyTemp
+    usd_input.value = usdTemp
+    cad_input.value = cadTemp
+    eur_input.value = eurTemp
 }
  
-function jpyBase(){
-    const usdTemp = 0 
-    const jpyTemp = 1
-    const cadTemp = 0
-    const mxnTemp = 0
-    const eurTemp = 0
-}
-function cadBase(){
-  
-}
-function mxnBase(){
-  
-}
 function eurBase(){
-  
+    const eurTemp = parseFloat(eur_input.value)
+    const usdTemp = eurTemp / eur
+    const jpyTemp = usdTemp * jpy
+    const cadTemp = usdTemp * cad
+    const mxnTemp = usdTemp * mxn
+
+    jpy_input.value = jpyTemp
+    usd_input.value = usdTemp
+    cad_input.value = cadTemp
+    mxn_input.value = mxnTemp
 }
+
 function main(){
     usd_input.addEventListener("input",usdBase); 
     jpy_input.addEventListener("input",jpyBase); 
