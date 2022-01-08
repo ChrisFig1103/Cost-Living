@@ -24,23 +24,28 @@
             <tbody>
                 <tr>
                     <td>USD</td>
-                    <th><input type="usd"></th>
+                    <th><input type="text" id="usd" name="usd"
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /></th>
                 </tr>
                 <tr>
                     <td>JPY</td>
-                    <th><input type="jpy"></th>
+                    <th><input type="text" id="jpy" name="jpy"
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /></th>
                 </tr>
                 <tr>
                     <td>CAD</td>
-                    <th><input type="cad"></th>
+                    <th><input type="text" id="cad" name="cad"
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /></th>
                 </tr>
                 <tr>
                     <td>MXN</td>
-                    <th><input type="mxn"></th>
+                    <th><input type="text" id="mxn" name="mxn"
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /></th>
                 </tr>
                 <tr>
                     <td>EUR</td>
-                    <th><input type="eur"></th>
+                    <th><input type="text" id="eur" name="eur"
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /></th>
                 </tr>
               
             </tbody>
