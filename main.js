@@ -5,18 +5,12 @@ const request = require('request-promise');
 
 app.listen(PORT, ()=>console.log (`Example app listening on port ${PORT}`))
 
-
-request(`https://freecurrencyapi.net/api/v2/latest?apikey=${process.env.currencyapi_key}`)
+request(`https://freecurrencyapi.net/api/v2/latest?apikey=3a04fe00-68de-11ec-b8a6-0bf8cfad6df8`)
 .then(response => {
-    console.log(response)
+    data = JSON.parse(response).data
+    console.log(data)
 })
 .catch(error => {
     console.log(error)
 })
-request(`https://freecurrencyapi.net/api/v2/latest?apikey=${process.env.currencyapi_key}&base_currency=USD`)
-.then(response => {
-console.log(response)
-})
-.catch(error => {
-console.log(error)
-})
+ 
